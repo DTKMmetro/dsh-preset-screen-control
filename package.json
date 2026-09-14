@@ -1,0 +1,37 @@
+{
+  "name": "dsh-preset-screen-control",
+  "version": "1.1.0",
+  "description": "DSH agent preset: operate a real Windows desktop — capture the live screen, overlay a true-coordinate grid, verify the target with a red crosshair, synthesize mouse and keyboard input, then capture the FULL screen again to confirm what the input actually did.",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "agent-preset",
+    "screen-control",
+    "automation",
+    "gui-automation",
+    "windows"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "os": [
+    "win32"
+  ],
+  "files": [
+    "preset",
+    "SPEC.md",
+    "README.md",
+    "install.ps1",
+    "install.sh"
+  ],
+  "scripts": {
+    "install-preset": "node -e \"console.log('Run install.ps1 (Windows) or install.sh (POSIX) from this directory.')\""
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "kind": "agent-preset",
+    "presetId": "screen-control",
+    "note": "This package ships a DSH agent preset, not a host-plane plugin. `dsh plugin add` installs npm dependencies into a profile and does NOT register a preset — the preset directory must be placed under ${DSH_HOME}/.agent-presets/screen-control/. Use install.ps1 / install.sh."
+  }
+}
